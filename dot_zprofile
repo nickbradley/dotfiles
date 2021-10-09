@@ -1,0 +1,4 @@
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+	mount /home/ncbradley/photos
+	QT_QPA_PLATFORM=wayland _JAVA_AWT_WM_NONREPARENTING=1 MOZ_ENABLE_WAYLAND=1 exec sway
+fi
